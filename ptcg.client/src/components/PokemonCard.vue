@@ -1,5 +1,5 @@
 <template>
-  <div class="component">
+  <div class="card border-0 bg-transparent">
 
 <img :src="card.images" alt="">
   </div>

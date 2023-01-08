@@ -1,7 +1,14 @@
 <template>
-  <div v-for="c in cards" :key="c.id">
-    <PokemonCard :card="c"/>
+  <SearchForm/>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-3" v-for="c in cards" :key="c.id">
+
+        <PokemonCard :card="c" />
+    
+    </div>
   </div>
+ </div>
 </template>
 
 <script>
@@ -11,6 +18,7 @@ import { cardsService } from '../services/CardsService.js';
 import { computed } from '@vue/reactivity';
 import PokemonCard from "../components/PokemonCard.vue";
 import { AppState } from "../AppState.js";
+import SearchForm from "../components/SearchForm.vue";
 
 export default {
     setup() {
@@ -25,13 +33,13 @@ export default {
         }
         ;
         onMounted(() => {
-            getCards();
+            // getCards();
         });
         return {
             cards: computed(() => AppState.cards)
         };
     },
-    components: { PokemonCard }
+    components: { PokemonCard, SearchForm }
 }
 </script>
 
