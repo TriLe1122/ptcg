@@ -31,6 +31,11 @@ export default {
   --main-height: calc(100vh - 32px - 64px);
 }
 
+main{
+  background-image: url('https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80');
+  background-size: cover;
+}
+
 
 footer {
   display: grid;
