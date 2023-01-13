@@ -41,7 +41,7 @@ export default {
         }
     }
     onMounted(() => {
-      // getCards();
+      getPokemon()
     });
     return {
       cards: computed(() => AppState.cards)
