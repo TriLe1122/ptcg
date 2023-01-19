@@ -1,6 +1,5 @@
 namespace ptcg.Interfaces;
 
-
  public interface IHasCreator : IDbItem<int>
 {
   string CreatorId { get; set; }
