@@ -14,3 +14,4 @@ global using CodeWorks.Utils;
 global using ptcg.Repositories;
 global using ptcg.Services;
 global using ptcg.Models;
+global using ptcg.Interfaces;
