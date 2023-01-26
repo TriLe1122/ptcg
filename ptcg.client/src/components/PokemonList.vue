@@ -11,24 +11,36 @@
   <div class="offcanvas-body">
     <!-- <p>Click a Pokemon, see all cards of that Pokemon</p> -->
   </div>
-  <div class="row list">
+  <section class="container list">
+  <div class="row">
   <div class="col-md-6" v-for="p in pokemon" :key="p.id">
-    <p>{{ p.name }}</p>
+    <p @click="getCardsForPokemon(p.name)">{{ p.name }}</p>
   </div>
 </div>
+</section>
 </div>
-  </div>
+</div>
 </template>
 
 
 <script>
 import { computed } from "vue";
 import { AppState } from "../AppState.js";
+import { cardsService } from "../services/CardsService.js";
+import Pop from "../utils/Pop.js";
 
 export default {
   setup(){
     return {
-      pokemon: computed(() => AppState.pokemon)
+      pokemon: computed(() => AppState.pokemon),
+      async getCardsForPokemon(term) {
+        try {
+            await cardsService.getCardsBySearchTerm(term)
+          } catch (error) {
+            console.error('[]',error)
+            Pop.error(error)
+          }
+      }
     }
   }
 }
