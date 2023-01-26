@@ -1,6 +1,7 @@
 <template>
   <SearchForm />
   <div class="container">
+    <PokemonList/>
     <div class="row">
       <div class="col-md-3" v-for="c in cards" :key="c.id">
 
@@ -19,6 +20,7 @@ import { computed } from '@vue/reactivity';
 import PokemonCard from "../components/PokemonCard.vue";
 import { AppState } from "../AppState.js";
 import SearchForm from "../components/SearchForm.vue";
+import PokemonList from "../components/PokemonList.vue";
 
 export default {
   setup() {
@@ -47,7 +49,7 @@ export default {
       cards: computed(() => AppState.cards)
     };
   },
-  components: { PokemonCard, SearchForm }
+  components: { PokemonCard, SearchForm, PokemonList }
 }
 </script>
 
