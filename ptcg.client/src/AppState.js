@@ -8,5 +8,7 @@ export const AppState = reactive({
 
   /** @type {import('./models/Card.js').Card[]} */
   cards: [],
+
+  pokemon:[]
   
 })
