@@ -11,7 +11,7 @@ class PokemonService{
     })
     // console.log(res.data);
     AppState.pokemon = res.data.results.map((p) => new Pokemon(p))
-    console.log(AppState.pokemon);
+    // console.log(AppState.pokemon);
 }
 }
 

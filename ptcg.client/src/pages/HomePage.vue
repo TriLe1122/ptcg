@@ -4,9 +4,7 @@
     <PokemonList/>
     <div class="row">
       <div class="col-md-3" v-for="c in cards" :key="c.id">
-
         <PokemonCard :card="c" />
-
       </div>
     </div>
   </div>
