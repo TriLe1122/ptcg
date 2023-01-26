@@ -25,7 +25,7 @@ class CardsService {
       }
     })
     AppState.cards = res.data.data.map(c => new Card(c))
-    console.log(AppState.cards);
+    // console.log(AppState.cards);
   }
 
 }

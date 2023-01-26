@@ -13,8 +13,9 @@
   </div>
   <section class="container list">
   <div class="row">
-  <div class="col-md-6" v-for="p in pokemon" :key="p.id">
-    <p @click="getCardsForPokemon(p.name)">{{ p.name }}</p>
+  <div class="col-md-6 selectable" v-for="p in pokemon" :key="p.id" @click="getCardsForPokemon(p.name)">
+    <p class="" >{{ p.name }}</p>
+    <img :src="p.img" alt="" height="50" width="50">
   </div>
 </div>
 </section>
